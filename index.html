@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-        总文章数 2
+        总文章数 3
     </nav>
 		<nav class="header-smart-menu">
     		
@@ -154,6 +154,96 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Spring-Boot-Starter机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/06/Spring-Boot-Starter%E6%9C%BA%E5%88%B6/">Spring Boot Starter机制</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/06/Spring-Boot-Starter%E6%9C%BA%E5%88%B6/" class="archive-article-date">
+  	<time datetime="2021-02-06T02:36:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-06</time>
+</a>
+<span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringBoot-Starter原理及使用"><a href="#SpringBoot-Starter原理及使用" class="headerlink" title="SpringBoot Starter原理及使用"></a>SpringBoot Starter原理及使用</h1><h3 id="1-Springboot-starter-机制"><a href="#1-Springboot-starter-机制" class="headerlink" title="1. Springboot starter 机制"></a>1. Springboot starter 机制</h3><p><img src="C:/Users/sirius/Desktop/p1.png" alt="springboot starter 原理"></p>
+<p>利用starter实现自动化配置只需要两个条件——</p>
+<p>1、maven依赖<br> 引入maven实质上就是导入jar包，spring-boot启动的时候会找到starter jar包<br> 中的resources/META-INF/spring.factories文件，根据spring.factories文件中的配置，找到需要自动配置的类。</p>
+<p>2、配置文件<br>配置类上面包括以下注解<br>@Configuration 表明是一个配置文件，被注解的类将成为一个bean配置类<br>@ConditionalOnClass 当classpath下发现该类的情况下进行自动配置<br>@ConditionalOnBean 当classpath下发现该类的情况下进行自动配置<br>@EnableConfigurationProperties 使@ConfigurationProperties注解生效<br>@AutoConfigureAfter 完成自动配置后实例化这个bean</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/spring-Boot//" class="article-tag-list-link color2">spring Boot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/06/Spring-Boot-Starter%E6%9C%BA%E5%88%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-我的第一篇Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -383,6 +473,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
